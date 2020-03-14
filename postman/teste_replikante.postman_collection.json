@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "55515b6d-a508-417e-a198-b4e0b541294d",
+		"name": "teste_replikante",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TipoProduto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tipo-produtos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tipo-produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoProduto-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tipo-produtos?tipo_produto=Fabiano",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tipo-produtos"
+					],
+					"query": [
+						{
+							"key": "tipo_produto",
+							"value": "Fabiano"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoProduto-get-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tipo-produtos/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tipo-produtos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoProduto-Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tipo-produtos/1?id_tipo_produtos=1&tipo_produto=oioioi9",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tipo-produtos",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id_tipo_produtos",
+							"value": "1"
+						},
+						{
+							"key": "tipo_produto",
+							"value": "oioioi9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoProduto-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tipo-produtos/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tipo-produtos",
+						"2"
+					],
+					"query": [
+						{
+							"key": "id_tipo_produtos",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "tipo_produto",
+							"value": "oioioi9",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
