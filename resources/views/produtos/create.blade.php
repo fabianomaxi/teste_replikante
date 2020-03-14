@@ -22,18 +22,18 @@
 
 	<a href="/produtos" class="btn btn-primary mb-2">Voltar</a>
 
-	<form method="post" action="/produtos/save/">
+	<form method="post" action="/produtos/save/" onsubmit="return validaProdutos()">
 		@csrf 
 		<input type="hidden" name="id_produtos" id="id_produtos" value="{{$produto->id_produtos}}">
 	  <div class="form-row">
 	    <div class="col">
-	      <input type="text" class="form-control" name="nome" placeholder="Nome do produto" value="{{$produto->nome}}">
+	      <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome do produto" value="{{$produto->nome}}">
 	    </div>
 	    <div class="col">
 	      <input type="text" class="form-control" value="{{ number_format($produto->preco, 2, ',', '.') }}" id="preco" name="preco" placeholder="Preço do produto" onKeyPress="return(moeda(this,'.',',',event))">
 	    </div>
 	    <div class="col">
-	    	<select class="form-control" name="id_tipo_produtos">
+	    	<select class="form-control" name="id_tipo_produtos" id="id_tipo_produtos">
 	    		<option value="">Tipo do Produto</option>
 			    	@foreach ( $tipo_produtos as $tipo ) 
 			    		<option {{ $tipo->id_tipo_produtos == $produto->id_tipo_produtos ? 'selected' : '' }} value="{{$tipo->id_tipo_produtos}}">{{$tipo->tipo_produto}}</option>
