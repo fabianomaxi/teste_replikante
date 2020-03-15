@@ -17,6 +17,8 @@ O projeto carece de alguns detalhes e melhorias, porém com o prazo que tive e a
 - baixar os arquios do repositório
 - executar o composer
 - executar php artisan migrate ou o SQL anexo na pasta database/sql/tipo_produtos.sql e database/sql/produtos.sql
+- Alterar o arquivo .env.example para .env
+- Alterar as configurações do banco de dados em .env
 
 ## API
 A collection está em postman/teste_replikante.postman_collection.json
